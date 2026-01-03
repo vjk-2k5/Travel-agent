@@ -1,17 +1,17 @@
-# 🌍 Travel Agent - AI Workflow Orchestrator
+# 🌍 AI Travel Agent - Workflow Orchestrator
 
-An LLM-powered travel agent that searches **real flights and hotels**, plans itineraries, and estimates costs using function calling.
+A powerful terminal-based travel assistant that leverages LLM reasoning (Groq) and real-world APIs to automate travel planning. It searches live flights and hotels, generates detailed AI itineraries, and provides cost estimates through a conversational interface.
 
-## ✨ Features
+## ✨ Key Features
 
-| Feature | API Source | Description |
-|---------|------------|-------------|
-| ✈️ Flight Search | FlightAPI.io | Real-time prices from 700+ airlines |
-| 🏨 Hotel Search | SearchAPI.io | Google Hotels data with ratings & amenities |
-| 🗺️ Trip Planning | Mistral 7B | AI-powered day-by-day itineraries |
-| 🏛️ Attractions | Mistral 7B | Top sights, food, activities by category |
-| 💰 Cost Estimation | Built-in | Detailed trip cost breakdowns |
-| 🎫 Booking Preview | Built-in | Dry-run mode for safe previews |
+| Feature | Provider | Description |
+|:---|:---|:---|
+| ✈️ **Flight Search** | FlightAPI.io | Real-time pricing and schedules from 700+ airlines |
+| 🏨 **Hotel Search** | SearchAPI.io | Live hotel data, ratings, and amenity filtering via Google Hotels |
+| 🗺️ **Trip Planning** | Mistral/Groq | AI-generated day-by-day itineraries tailored to your style |
+| 🏛️ **Sightseeing** | Mistral/Groq | Categorized top attractions, local food, and activities |
+| 💰 **Cost Engine** | Custom | Detailed trip cost estimation with tax and fee breakdowns |
+| 🎫 **Secure Booking** | Internal | Dry-run mode for safe booking previews and validation |
 
 ## 🚀 Quick Start
 
@@ -27,12 +27,13 @@ cp .env.example .env
 ```
 
 **Required:**
-- `GROQ_API_KEY` - Get from [console.groq.com](https://console.groq.com)
+- `GROQ_API_KEY` - LLM orchestration via Groq [Required]
+- `.env` file (copied from `.env.example`)
 
-**Optional (for real data):**
-- `FLIGHT_API` - Get from [flightapi.io](https://www.flightapi.io)
-- `SEARCH_API` - Get from [searchapi.io](https://www.searchapi.io)
-- `HUGGINGFACE_API_TOKEN` - Get from [huggingface.co](https://huggingface.co)
+**Optional (for real-time data):**
+- `FLIGHT_API` - [FlightAPI.io](https://www.flightapi.io)
+- `SEARCH_API` - [SearchAPI.io](https://www.searchapi.io)
+- `HUGGINGFACE_API_TOKEN` - [HuggingFace.co](https://huggingface.co)
 
 ### 3. Run the Agent
 ```bash
